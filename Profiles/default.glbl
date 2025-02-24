@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'9a95070032a71d2597b1cd51b98aa345'</initValue>
+      <name>OpenWeatherAPIKey</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
