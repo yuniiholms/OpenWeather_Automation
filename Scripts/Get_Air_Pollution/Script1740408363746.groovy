@@ -16,16 +16,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import groovy.json.JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil
 
-import groovy.json.JsonSlurper
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-
-// Send API Request
+// Send API Request using South Jakarta latitude and longitude
 def response = WS.sendRequest(findTestObject('Get_Air_Pollution'))
 
 // Verify Status Code
@@ -38,7 +32,7 @@ def jsonResponse = new JsonSlurper().parseText(response.getResponseBodyContent()
 assert jsonResponse.coord.lat == -6.2615
 assert jsonResponse.coord.lon == 106.8106
 
-// Verify JSON Schema (Basic Check)
+// Verify JSON Schema
 assert jsonResponse.list.size() > 0
 
 // Verify Air Quality Index (AQI) exists

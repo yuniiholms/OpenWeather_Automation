@@ -21,7 +21,7 @@ import com.kms.katalon.core.util.KeywordUtil
 import java.text.SimpleDateFormat
 
 
-// Send API Request using latitude and longitude
+// Send API Request using South Jakarta latitude and longitude
 def response = WS.sendRequest(findTestObject('Get_Weather_Forecast'))
 
 // Print response details for debugging
@@ -38,7 +38,7 @@ def jsonResponse = new JsonSlurper().parseText(response.getResponseBodyContent()
 assert jsonResponse.city.coord.lat == -6.2615
 assert jsonResponse.city.coord.lon == 106.8106
 
-// Verify JSON Schema (Basic Check)
+// Verify JSON Schema
 assert jsonResponse.list.size() > 0
 
 // Verify that forecast data contains temperature, humidity, and weather description
