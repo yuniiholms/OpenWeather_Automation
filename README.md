@@ -1,4 +1,4 @@
-# ✨Steps to run
+# ✨Steps To Run
 
 1. Navigate to "Test Suites" menu
 2. Click test suite "Weather_API_TestSuite"
@@ -6,7 +6,7 @@
  
  <br>
    
-# ✨How to get the report
+# ✨How To Get The Report
 
 ## For Katalon Enterprise user
 1. Navigate to the "Reports" menu in Katalon Studio
